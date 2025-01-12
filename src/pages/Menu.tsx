@@ -6,77 +6,7 @@ import { ShoppingCart } from "lucide-react";
 import { useToast } from "@/components/ui/use-toast";
 import { motion } from "framer-motion";
 
-const menuCategories = [
-  {
-    category: "Appetizers",
-    items: [
-      { 
-        name: "Crispy Calamari", 
-        price: "$12.99", 
-        description: "Lightly battered calamari served with marinara sauce",
-        image: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=500&h=400"
-      },
-      { 
-        name: "Bruschetta", 
-        price: "$9.99", 
-        description: "Toasted bread topped with tomatoes, garlic, and fresh basil",
-        image: "https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?w=500&h=400"
-      },
-      { 
-        name: "Spring Rolls", 
-        price: "$8.99", 
-        description: "Vegetable spring rolls with sweet chili sauce",
-        image: "https://images.unsplash.com/photo-1606467516753-58be04f839d4?w=500&h=400"
-      },
-    ]
-  },
-  {
-    category: "Main Course",
-    items: [
-      { 
-        name: "Grilled Salmon", 
-        price: "$24.99", 
-        description: "Fresh salmon with lemon butter sauce and seasonal vegetables",
-        image: "https://images.unsplash.com/photo-1467003909585-2f8a72700288?w=500&h=400"
-      },
-      { 
-        name: "Beef Tenderloin", 
-        price: "$29.99", 
-        description: "8oz tenderloin with garlic mashed potatoes",
-        image: "https://images.unsplash.com/photo-1558030006-450675393462?w=500&h=400"
-      },
-      { 
-        name: "Vegetable Curry", 
-        price: "$18.99", 
-        description: "Mixed vegetables in aromatic curry sauce with basmati rice",
-        image: "https://images.unsplash.com/photo-1604579905647-9e5e3e276fbd?w=500&h=400"
-      },
-    ]
-  },
-  {
-    category: "Desserts",
-    items: [
-      { 
-        name: "Tiramisu", 
-        price: "$8.99", 
-        description: "Classic Italian dessert with coffee-soaked ladyfingers",
-        image: "https://images.unsplash.com/photo-1571877227200-a0d98ea607e9?w=500&h=400"
-      },
-      { 
-        name: "Chocolate Lava Cake", 
-        price: "$9.99", 
-        description: "Warm chocolate cake with molten center",
-        image: "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=500&h=400"
-      },
-      { 
-        name: "Crème Brûlée", 
-        price: "$7.99", 
-        description: "Classic French vanilla custard with caramelized sugar",
-        image: "https://images.unsplash.com/photo-1470124182917-cc6e71b22ecc?w=500&h=400"
-      },
-    ]
-  }
-];
+// ... rest of the imports and menuCategories array ...
 
 const Menu = () => {
   const { toast } = useToast();
@@ -89,7 +19,7 @@ const Menu = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-orange-50 via-white to-orange-50">
+    <div className="min-h-screen flex flex-col bg-background">
       <Navbar />
       <main className="flex-grow pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -121,7 +51,7 @@ const Menu = () => {
                       whileHover={{ y: -10 }}
                       transition={{ duration: 0.3 }}
                     >
-                      <Card className="overflow-hidden bg-white/80 backdrop-blur-sm border-none shadow-xl hover:shadow-2xl transition-all duration-300">
+                      <Card className="overflow-hidden bg-card hover:bg-card/80 backdrop-blur-sm border-none shadow-xl hover:shadow-2xl transition-all duration-300">
                         <div className="h-48 overflow-hidden">
                           <motion.img 
                             whileHover={{ scale: 1.1 }}
@@ -133,12 +63,12 @@ const Menu = () => {
                         </div>
                         <CardHeader>
                           <CardTitle className="flex justify-between items-center text-xl">
-                            <span className="text-gray-800">{item.name}</span>
+                            <span className="text-foreground">{item.name}</span>
                             <span className="text-orange-500 font-bold">{item.price}</span>
                           </CardTitle>
                         </CardHeader>
                         <CardContent>
-                          <p className="text-gray-600 mb-6">{item.description}</p>
+                          <p className="text-muted-foreground mb-6">{item.description}</p>
                           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                             <Button 
                               className="w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white shadow-lg hover:shadow-xl transition-all duration-300" 

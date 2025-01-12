@@ -51,16 +51,15 @@ const Bubble = ({ className, delay = 0 }: { className?: string; delay?: number }
 
 const Index = () => {
   return (
-    <div className="min-h-screen flex flex-col relative overflow-hidden bg-gradient-to-b from-white via-orange-50 to-white">
-      {/* Enhanced dynamic bubbles with staggered animations */}
-      <Bubble className="bg-[#FEC6A1] w-96 h-96 top-20 -left-20" delay={0} />
-      <Bubble className="bg-[#E5DEFF] w-[32rem] h-[32rem] top-40 -right-20" delay={1} />
-      <Bubble className="bg-[#FFDEE2] w-[28rem] h-[28rem] bottom-20 left-40" delay={2} />
-      <Bubble className="bg-[#D3E4FD] w-80 h-80 bottom-40 right-20" delay={3} />
+    <div className="min-h-screen flex flex-col relative overflow-hidden bg-background">
+      {/* Update bubble colors for dark mode compatibility */}
+      <Bubble className="bg-orange-500/10 dark:bg-orange-500/5 w-96 h-96 top-20 -left-20" delay={0} />
+      <Bubble className="bg-purple-500/10 dark:bg-purple-500/5 w-[32rem] h-[32rem] top-40 -right-20" delay={1} />
+      <Bubble className="bg-pink-500/10 dark:bg-pink-500/5 w-[28rem] h-[28rem] bottom-20 left-40" delay={2} />
+      <Bubble className="bg-blue-500/10 dark:bg-blue-500/5 w-80 h-80 bottom-40 right-20" delay={3} />
       
       <Navbar />
       
-      {/* Enhanced Hero Section */}
       <section className="relative pt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-20 pb-24">
           <div className="flex flex-col md:flex-row items-center justify-between relative z-10">
@@ -75,7 +74,7 @@ const Index = () => {
                 <br />
                 Delivered to You
               </h1>
-              <p className="font-inter text-gray-600 text-xl mb-8 leading-relaxed">
+              <p className="text-muted-foreground text-xl mb-8 leading-relaxed">
                 Experience the best food delivery service in town. Fresh, fast, and always delicious.
               </p>
               <motion.div
@@ -111,7 +110,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Enhanced Featured Dishes Section */}
       <section className="py-20 relative">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.h2 

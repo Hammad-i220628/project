@@ -15,7 +15,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-orange-50 via-white to-orange-50">
+    <div className="min-h-screen flex flex-col bg-background">
       <Navbar />
       <main className="flex-grow pt-24 pb-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -33,31 +33,31 @@ const Contact = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.2 }}
             >
-              <h2 className="text-3xl font-semibold mb-8 text-gray-800">Get in Touch</h2>
+              <h2 className="text-3xl font-semibold mb-8 text-foreground">Get in Touch</h2>
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="space-y-2">
                   <Input 
                     placeholder="Your Name" 
-                    className="h-12 text-lg bg-white/80 backdrop-blur-sm border-2 focus:border-orange-500 transition-colors"
+                    className="h-12 text-lg bg-card/50 backdrop-blur-sm border-2 focus:border-orange-500 transition-colors"
                   />
                 </div>
                 <div className="space-y-2">
                   <Input 
                     type="email" 
                     placeholder="Your Email" 
-                    className="h-12 text-lg bg-white/80 backdrop-blur-sm border-2 focus:border-orange-500 transition-colors"
+                    className="h-12 text-lg bg-card/50 backdrop-blur-sm border-2 focus:border-orange-500 transition-colors"
                   />
                 </div>
                 <div className="space-y-2">
                   <Input 
                     placeholder="Subject" 
-                    className="h-12 text-lg bg-white/80 backdrop-blur-sm border-2 focus:border-orange-500 transition-colors"
+                    className="h-12 text-lg bg-card/50 backdrop-blur-sm border-2 focus:border-orange-500 transition-colors"
                   />
                 </div>
                 <div className="space-y-2">
                   <Textarea 
                     placeholder="Your Message" 
-                    className="min-h-[200px] text-lg bg-white/80 backdrop-blur-sm border-2 focus:border-orange-500 transition-colors resize-none"
+                    className="min-h-[200px] text-lg bg-card/50 backdrop-blur-sm border-2 focus:border-orange-500 transition-colors resize-none"
                   />
                 </div>
                 <motion.div whileHover={{ scale: 1.02 }} whileTap={{ scale: 0.98 }}>
@@ -76,54 +76,54 @@ const Contact = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: 0.4 }}
             >
-              <h2 className="text-3xl font-semibold mb-8 text-gray-800">Contact Information</h2>
+              <h2 className="text-3xl font-semibold mb-8 text-foreground">Contact Information</h2>
               <div className="space-y-6">
                 <motion.div whileHover={{ scale: 1.02 }}>
-                  <Card className="bg-white/80 backdrop-blur-sm border-none shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Card className="bg-card/50 backdrop-blur-sm border-none shadow-lg hover:shadow-xl transition-all duration-300">
                     <CardContent className="flex items-center space-x-6 p-6">
                       <div className="bg-gradient-to-br from-orange-500 to-red-500 p-4 rounded-full">
                         <MapPin className="h-8 w-8 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-800">Address</h3>
-                        <p className="text-gray-600 text-lg">123 Food Street, Cuisine City, FC 12345</p>
+                        <h3 className="text-xl font-semibold text-foreground">Address</h3>
+                        <p className="text-muted-foreground text-lg">123 Food Street, Cuisine City, FC 12345</p>
                       </div>
                     </CardContent>
                   </Card>
                 </motion.div>
 
                 <motion.div whileHover={{ scale: 1.02 }}>
-                  <Card className="bg-white/80 backdrop-blur-sm border-none shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Card className="bg-card/50 backdrop-blur-sm border-none shadow-lg hover:shadow-xl transition-all duration-300">
                     <CardContent className="flex items-center space-x-6 p-6">
                       <div className="bg-gradient-to-br from-orange-500 to-red-500 p-4 rounded-full">
                         <Phone className="h-8 w-8 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-800">Phone</h3>
-                        <p className="text-gray-600 text-lg">(555) 123-4567</p>
+                        <h3 className="text-xl font-semibold text-foreground">Phone</h3>
+                        <p className="text-muted-foreground text-lg">(555) 123-4567</p>
                       </div>
                     </CardContent>
                   </Card>
                 </motion.div>
 
                 <motion.div whileHover={{ scale: 1.02 }}>
-                  <Card className="bg-white/80 backdrop-blur-sm border-none shadow-lg hover:shadow-xl transition-all duration-300">
+                  <Card className="bg-card/50 backdrop-blur-sm border-none shadow-lg hover:shadow-xl transition-all duration-300">
                     <CardContent className="flex items-center space-x-6 p-6">
                       <div className="bg-gradient-to-br from-orange-500 to-red-500 p-4 rounded-full">
                         <Mail className="h-8 w-8 text-white" />
                       </div>
                       <div>
-                        <h3 className="text-xl font-semibold text-gray-800">Email</h3>
-                        <p className="text-gray-600 text-lg">info@fooddelight.com</p>
+                        <h3 className="text-xl font-semibold text-foreground">Email</h3>
+                        <p className="text-muted-foreground text-lg">info@fooddelight.com</p>
                       </div>
                     </CardContent>
                   </Card>
                 </motion.div>
               </div>
 
-              <div className="mt-12 p-8 bg-white/80 backdrop-blur-sm rounded-2xl shadow-lg">
-                <h3 className="text-2xl font-semibold mb-6 text-gray-800">Opening Hours</h3>
-                <div className="space-y-4 text-lg text-gray-600">
+              <div className="mt-12 p-8 bg-card/50 backdrop-blur-sm rounded-2xl shadow-lg">
+                <h3 className="text-2xl font-semibold mb-6 text-foreground">Opening Hours</h3>
+                <div className="space-y-4 text-lg text-muted-foreground">
                   <p className="flex justify-between">
                     <span>Monday - Friday:</span>
                     <span className="font-semibold">11:00 AM - 10:00 PM</span>
